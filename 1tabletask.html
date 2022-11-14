@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="task">
+        <input id="Id" type="number">
+        <input id="Name" type="text">
+        <input id="Surname" type="text">
+        <button id="button">Melumati liste elave et</button>
+    </div>
+    <br>
+    <table id="table" class="table" style="width: 200px; ">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Surname</th>
+        </tr>
+        
+    </table>
+
+    <script>
+        let id=document.getElementById("Id");
+        let Name=document.getElementById("Name");
+        let Surname=document.getElementById("Surname");
+        let button=document.getElementById("button");
+        var count=0;
+
+        button.addEventListener("click",function () {
+            count++
+            var table = document.getElementById("table");
+            var row = table.insertRow(count);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            
+            cell1.innerHTML = id.value; 
+            cell2.innerHTML = Name.value;
+            cell3.innerHTML=Surname.value;
+            
+        })
+    </script>
+</body>
+
+</html>
